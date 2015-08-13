@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Weather Map Sample</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+	<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/Leaflet.fullscreen.min.js'></script>
+	<link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/leaflet.fullscreen.css' rel='stylesheet' />
+	<script src="js/vendor/leaflet.ajax.min.js"></script>
+	<script src="js/vendor/turf.min.js"></script>
+</head>
+<body>
+<div id="wrapper">
+	<div id="control">
+		<button onclick="addWeatherStations();">Weather Stations</button></br>
+		<button onclick="addIsoLines();">Iso Lines</button></br>
+		<button onclick="addHexGrid();">Hex Grid</button></br>
+		<button onclick="addTinGrid();">TIN Interpolation</button>
+	</div>
+	<div id="map"></div>
+</div>
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/backgroundMap.js"></script>
+<script src="js/dataLoader.js"></script>
+<script src="js/buttonHandlers.js"></script>
+</body>
+</html>

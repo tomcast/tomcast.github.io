@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+html body {
+	margin: 0;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	background-color: #999999;
+}
+#wrapper{
+	margin: 0px;
+}
+
+#control{
+	float: left;
+	background-color: blue;
+	margin: 0px;
+	width: 200px;
+	height: 100vh;
+}
+
+#map{
+	margin-left: 200px;
+	height: 100vh;
+}
