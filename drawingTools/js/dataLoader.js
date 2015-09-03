@@ -8,7 +8,14 @@ function getRandomColor() {
 }
 
 
-var districtLayer = new L.GeoJSON.AJAX("data/districts.json");
+var districtLayer = new L.GeoJSON.AJAX("data/districts.json", {
+	style: function(feature) {
+		return {color: getRandomColor()};
+	},
+	onEachFeature: function(feature, layer) {
+		layer.bindPopup("<h3>" + feature.properties.Name + "</h3></br>" + "Pop: " + feature.properties.Pop2006);
+	}
+}).addTo(map);
 
 // L.geoJSON(CairoDistricts, {
 // 	style: function(feature) {
