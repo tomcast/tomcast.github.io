@@ -7,7 +7,10 @@ function getRandomColor() {
     return color;
 }
 
-L.geoJson(CairoDistricts, {
+
+var districtLayer = new L.GeoJSON.AJAX("data/districts.json");
+
+L.geoJSON(CairoDistricts, {
 	style: function(feature) {
 		return {color: getRandomColor()};
 	},
