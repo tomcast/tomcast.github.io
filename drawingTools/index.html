@@ -11,6 +11,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 
 <script type="text/javascript" src="js/leaflet.ajax.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -24,13 +25,14 @@
 <div id='map'></div>
 <div id="dataFooter">
   <div>Available Viewsets</div>
-  <div class="dataset">Population</div>
-  <div class="dataset">Etc</div>
-  <div class="dataset">Etc</div>
+  <div class="dataset" id="population">Population</div>
+  <div class="dataset" id="ford">Ford Outlets</div>
+  <div class="dataset" id="dcs">Competitive Outlets</div>
 </div>
 
 <script type="text/javascript" src="js/map.js"></script>
 <script type="text/javascript" src="js/dataLoader.js"></script>
+<script type="text/javascript" src="js/controls.js"></script>
 
 </body>
 </html>

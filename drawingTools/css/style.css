@@ -31,8 +31,11 @@
  	display: inline-block;
  	margin: 10px 10px 10px 10px;
  	background-color: #999;
- 	outline-color: green;
- 	outline-width: 2px;
  	height: 100px; 
  	width: 150px;
+ }
+ 
+ .dataset:hover{
+	outline-style: solid;
+    outline-width: 5px;
  }
