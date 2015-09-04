@@ -10,7 +10,9 @@ function getRandomColor() {
 
 var districtLayer = new L.GeoJSON.AJAX("data/districts.json", {
 	style: function(feature) {
-		return {color: getRandomColor()};
+		return {color: getRandomColor(),
+				weight: 2,
+				opacity: .25};
 	},
 	onEachFeature: function(feature, layer) {
 		layer.bindPopup("<h3>" + feature.properties.Name + "</h3></br>" + "Pop: " + feature.properties.Pop2006);
