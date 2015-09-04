@@ -1,7 +1,9 @@
 function popColor ( pop ) {
-	return  pop > 500000 ? '#800026':
-			pop > 100000 ? '#FD8D3C':
-						   '#FFEDA0';
+	return  pop > 525035 ? '#b30000':
+			pop > 322318 ? '#e34a33':
+			pop > 161947 ? '#fc8d59':
+			pop > 78123  ? '#fdcc8a':
+						   '#fc8d59';
 }
 
 $( "#population" ).click(function() {
