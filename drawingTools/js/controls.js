@@ -6,6 +6,13 @@ function popColor ( pop ) {
 						   '#fc8d59';
 }
 
+$( "#default" ).click(function() {
+	districtLayer.setStyle(
+		function(feature) {
+			return {color: getRandomColor()};
+		})
+});
+
 $( "#population" ).click(function() {
 	districtLayer.setStyle(
 		function(feature) {
