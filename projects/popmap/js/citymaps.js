@@ -4,9 +4,8 @@ function popColor (popClass) {
 			popClass == '500,000 to 999,999' ? '#C7EAE5':
 			popClass == '250,000 to 499,999' ? '#F5F5F5':
 			popClass == '100,000 to 249,999' ? '#F6E8C3':
-			popClass == '100,000 to 249,999' ? '#D8B365':
-			popClass == '50,000 to 99,999' ? '#8C510A':
-						'#AEAFB0';
+			popClass == '50,000 to 99,999' ? '#D8B365':
+											 '#8C510A';
 }
 
 var cityLayer = new L.GeoJSON.AJAX("data/worldCityPop.json", {
