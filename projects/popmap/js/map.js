@@ -30,10 +30,6 @@ var Here_DayTransit = L.tileLayer('http://{s}.{base}.maps.cit.api.here.com/mapti
   maxZoom: 20
 });
 
-var OpenStreetMap_BlackAndWhite = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
-  maxZoom: 18
-});
-
 //Initiate a basemap on load, OSM for default, and set it as our default activeLayer
 osmLayer.addTo(map);
 
@@ -41,7 +37,6 @@ var featureGroup = L.featureGroup().addTo(map);
 
 var baseMaps = {
   "OpenStreetMap": osmLayer,
-  "OpenStreetMap Black and White": OpenStreetMap_BlackAndWhite,
   "Day Transit": Here_DayTransit,
   "Satellite": Here_SatHybrid
 };
