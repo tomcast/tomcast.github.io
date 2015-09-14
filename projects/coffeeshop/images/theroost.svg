@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 500 274" enable-background="new 0 0 500 274" xml:space="preserve">
+<g id="Upper_Wall">
+	<rect x="71.1" y="68.2" fill="#CCCCCC" stroke="#000000" stroke-miterlimit="10" width="350.3" height="104.9"/>
+</g>
+<g id="Lower_Wall">
+	<rect x="84.1" y="173.1" fill="#603813" stroke="#000000" stroke-miterlimit="10" width="325.3" height="75.1"/>
+	<rect x="80.7" y="170.7" fill="#42210B" stroke="#000000" stroke-miterlimit="10" width="331.5" height="8.4"/>
+</g>
+<g id="Door">
+	<rect x="205.4" y="73.9" fill="#8C6239" stroke="#000000" stroke-miterlimit="10" width="85.1" height="174.4"/>
+	<g>
+		<rect x="220.2" y="99.1" fill="#F6F0C5" stroke="#000000" stroke-miterlimit="10" width="24.4" height="30.1"/>
+		<rect x="220.2" y="138.6" fill="#F6F0C5" stroke="#000000" stroke-miterlimit="10" width="24.4" height="30.1"/>
+		<rect x="252.2" y="99.1" fill="#F6F0C5" stroke="#000000" stroke-miterlimit="10" width="24.4" height="30.1"/>
+		<rect x="252.2" y="138.6" fill="#F6F0C5" stroke="#000000" stroke-miterlimit="10" width="24.4" height="30.1"/>
+		<rect x="220.2" y="173.1" fill="#F6F0C5" stroke="#000000" stroke-miterlimit="10" width="24.4" height="30.1"/>
+		<rect x="220.2" y="212.6" fill="#F6F0C5" stroke="#000000" stroke-miterlimit="10" width="24.4" height="30.1"/>
+		<rect x="252.2" y="173.1" fill="#F6F0C5" stroke="#000000" stroke-miterlimit="10" width="24.4" height="30.1"/>
+		<rect x="252.2" y="212.6" fill="#F6F0C5" stroke="#000000" stroke-miterlimit="10" width="24.4" height="30.1"/>
+	</g>
+	<rect x="208.3" y="170.8" fill="#926F00" stroke="#000000" stroke-miterlimit="10" width="9.1" height="34.9"/>
+</g>
+<g id="Windows">
+	<g>
+		<path fill="#8C6239" stroke="#000000" stroke-miterlimit="10" d="M106,168.7l-5.3-67.2c6.2-17.4,46.3-25.6,66.9,0l2.3,67h-64"/>
+		<path fill="#F6F0C5" stroke="#000000" stroke-miterlimit="10" d="M113.2,161.2l-4-57c4.8-14.7,35.6-21.3,51.4,0.3l1.8,57H113"/>
+		<g>
+			<polygon fill="#8C6239" points="133.2,164.8 129,89 136.6,88.4 142,165 133,165 			"/>
+			<rect x="107.9" y="111.5" fill="#8C6239" width="54.7" height="5.9"/>
+			<rect x="110" y="136.5" fill="#8C6239" width="52.6" height="6.3"/>
+		</g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="129" y1="90.6" x2="130.2" y2="111.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="130" y1="111.5" x2="110" y2="111.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="138" y1="111.5" x2="161" y2="111.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="136.8" y1="90.8" x2="138" y2="111.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="139" y1="117.5" x2="161" y2="117.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="162" y1="136.5" x2="140" y2="136.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="140" y1="136.5" x2="139" y2="117.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="131" y1="117.5" x2="110" y2="117.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="131" y1="117.5" x2="131.6" y2="136.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="132" y1="136.5" x2="111" y2="136.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="112" y1="142.5" x2="132" y2="142.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="132" y1="142.5" x2="133.1" y2="161.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="142" y1="161.5" x2="140.4" y2="142.8"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="140" y1="142.5" x2="162" y2="142.5"/>
+	</g>
+	<g>
+		<path fill="#8C6239" stroke="#000000" stroke-miterlimit="10" d="M389.9,168.7l5.2-67.2c-6.2-17.4-46.4-25.6-66.9,0l-2.3,67H390"
+			/>
+		<path fill="#F6F0C5" stroke="#000000" stroke-miterlimit="10" d="M382.7,161.2l3.9-57c-4.8-14.7-35.6-21.3-51.4,0.3l-1.8,57H383"
+			/>
+		<g>
+			<polygon fill="#8C6239" points="362.5,164.8 366.8,89 359.2,88.4 353.8,165 362.8,165 			"/>
+			<rect x="333.2" y="111.5" fill="#8C6239" width="54.7" height="5.9"/>
+			<rect x="333.2" y="136.5" fill="#8C6239" width="52.6" height="6.3"/>
+		</g>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="366.7" y1="90.6" x2="365.5" y2="111.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="366" y1="111.5" x2="386" y2="111.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="358" y1="111.5" x2="335" y2="111.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="359" y1="90.8" x2="357.8" y2="111.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="357" y1="117.5" x2="335" y2="117.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="334" y1="136.5" x2="356" y2="136.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="355.8" y1="136.5" x2="356.8" y2="117.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="365" y1="117.5" x2="386" y2="117.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="364.8" y1="117.5" x2="364.1" y2="136.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="364" y1="136.5" x2="385" y2="136.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="384" y1="142.5" x2="364" y2="142.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="363.8" y1="142.5" x2="362.7" y2="161.5"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="353.8" y1="161.5" x2="355.3" y2="142.8"/>
+		<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="356" y1="142.5" x2="334" y2="142.5"/>
+	</g>
+</g>
+<g id="Pillars">
+	<polyline fill="#42210B" stroke="#000000" stroke-miterlimit="10" points="79.1,248.3 53.3,73.7 75.8,68.2 98,248.5 79,248.5 	"/>
+	<polyline fill="#42210B" stroke="#000000" stroke-miterlimit="10" points="416,248.3 441.9,73.7 419.5,68.2 397.3,248.5 416,248.5 
+			"/>
+	<polyline fill="#42210B" stroke="#000000" stroke-miterlimit="10" points="205,72.5 184,72.5 187.8,248.5 188,248.5 207,248.5 
+		207.4,248.5 205.5,72.4 	"/>
+	<polyline fill="#42210B" stroke="#000000" stroke-miterlimit="10" points="290,72.5 311.4,72.5 307.6,248.5 307.4,248.5 
+		288.4,248.5 288,248.5 289.7,72.4 	"/>
+</g>
+<g id="Roof">
+	<path fill="#8C6239" stroke="#000000" stroke-miterlimit="10" d="M466.5,37.8C250,6.7,118.6,26.2,30.4,36.7l7.9,45.2
+		C240.5,70,245.6,71.1,458,84.1L466.5,37.8z"/>
+	<path fill="#603813" stroke="#000000" stroke-miterlimit="10" d="M430.4,21C268.8,5.6,239.4,5.3,65.9,21L30.4,36.7
+		C118.6,26.2,250,6.7,466.5,37.8L430.4,21z"/>
+</g>
+<g id="Roof-Sign">
+	<polyline fill="#39B54A" stroke="#000000" stroke-miterlimit="10" points="180,33.5 314.5,33.5 314.5,33.8 315,82.5 180.5,82.5 
+		180.5,33 	"/>
+	<path fill="#8CC63F" stroke="#F2F2F2" stroke-miterlimit="10" d="M298.9,73.7H197.9c-6.6,0-12-5.4-12-12v-6.6c0-6.6,5.4-12,12-12
+		h100.9c6.6,0,12,5.4,12,12v6.6C310.9,68.3,305.5,73.7,298.9,73.7z"/>
+</g>
+<g id="Lantern">
+	<polyline fill="#F6F0C5" stroke="#000000" stroke-miterlimit="10" points="199,114.5 175,114.5 174.8,114.7 177.5,139.7 
+		188.9,140.9 196.4,140.3 198.7,114.7 	"/>
+	<polygon fill="#999999" stroke="#000000" stroke-miterlimit="10" points="173.3,111.7 186.5,100.5 199.4,111.7 186.7,112.5 	"/>
+	<polyline fill="#999999" stroke="#000000" stroke-miterlimit="10" points="171.9,111.8 186.7,112.5 186.1,112.5 200.7,111.8 
+		200.5,116 186.1,116.5 186.4,116.5 171.7,116 171.9,111.8 	"/>
+	<polyline fill="#999999" stroke="#000000" stroke-miterlimit="10" points="176.2,138.6 176.2,142.5 176.2,142.5 186.5,143.3 
+		197.5,142 197.5,139.2 197.5,138.6 186.5,139.3 176.2,138.6 	"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="186.5" y1="116" x2="186.5" y2="112"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="186.5" y1="116" x2="186.5" y2="112"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="186.5" y1="112" x2="186.5" y2="100"/>
+	<line fill="none" stroke="#000000" stroke-miterlimit="10" x1="186.5" y1="112" x2="186.5" y2="143"/>
+</g>
+<g id="Sign">
+	<g id="Sign_1_">
+		<rect x="339.1" y="221.1" fill="#42210B" stroke="#000000" stroke-miterlimit="10" width="21.7" height="35.3"/>
+		<path fill="#42210B" stroke="#000000" stroke-miterlimit="10" d="M385.4,239h-69.6c-2.2,0-4-1.8-4-4v-59c0-2.2,1.8-4,4-4h69.6
+			c2.2,0,4,1.8,4,4v59C389.4,237.2,387.6,239,385.4,239z"/>
+		<path fill="#FFF1D0" stroke="#000000" stroke-miterlimit="10" d="M380.1,235.5h-58.5c-3.3,0-6-2.7-6-6v-45.8c0-3.3,2.7-6,6-6h58.5
+			c3.3,0,6,2.7,6,6v45.8C386.1,232.8,383.4,235.5,380.1,235.5z"/>
+		<rect x="327" y="255.4" fill="#42210B" stroke="#000000" stroke-miterlimit="10" width="46" height="8"/>
+	</g>
+	<g id="Owl">
+		<path fill="#39B54A" d="M336.1,185.3c3.5-4.2,9.4-6,14.9-5.9c2.9,0,5.9,0.6,8.2,2.4c1.8,1.4,3,3.5,4,5.7c1.4,3.2,2.4,6.5,3,9.9
+			c0.5,2.7,0.7,5.5,1.9,7.9c0.9,1.7,2.2,3.2,2.6,5c0.4,2-0.5,4.1-1.6,5.9c-2,3.3-4.6,6.3-7.7,8.6c-2.5,1.9-5.6,4-5.5,7.1
+			c0,0.4,0.1,0.9-0.2,1.3c-0.3,0.4-0.7,0.4-1.2,0.5c-1.3,0.2-2.6,0.4-3.9,0.6c-0.9,0.1-1.8,0.3-2.5-0.2c-1.1-0.6-1.3-2.1-1.2-3.3
+			c0.1-1.2,0.3-2.6-0.3-3.6c-1-1.8-3.6-1.8-5.6-2.3c-4.8-1.3-7.5-6.3-8.8-11.1c-1.9-7.3-2-15.2,0.6-22.3
+			C333.6,189.2,334.6,187.1,336.1,185.3z"/>
+		<g id="Glasses_1_">
+			<ellipse fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="342.1" cy="192" rx="3" ry="3.3"/>
+			<ellipse fill="none" stroke="#FFFFFF" stroke-miterlimit="10" cx="351.1" cy="192" rx="3" ry="3.3"/>
+			<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="345" y1="191.5" x2="348" y2="191.5"/>
+			<ellipse fill="#F2F2F2" stroke="#FFFFFF" stroke-miterlimit="10" cx="346.6" cy="198.7" rx="1.4" ry="2.4"/>
+			<path fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M341.8,198.2c-0.4-0.1-0.9,0-1.2,0.3c-0.2,0.2-0.3,0.5-0.3,0.8
+				c-0.4,1.2-0.7,2.5-1.1,3.7c-0.1,0.3-0.1,0.7,0.2,0.8c0.1,0,0.3-0.1,0.4-0.2C341.1,202.2,344.2,198.9,341.8,198.2"/>
+			<path fill="#FFFFFF" stroke="#FFFFFF" stroke-miterlimit="10" d="M351,198.2c0.4-0.1,0.9,0,1.2,0.3c0.2,0.2,0.3,0.5,0.3,0.8
+				c0.4,1.2,0.7,2.5,1.1,3.7c0.1,0.3,0.1,0.7-0.2,0.8c-0.1,0-0.3-0.1-0.4-0.2C351.7,202.2,348.7,198.9,351,198.2"/>
+		</g>
+	</g>
+	<g id="Coffee">
+		<rect x="329.1" y="214.3" fill="#C1272D" width="13.1" height="15.3"/>
+		<path fill="none" stroke="#C1272D" stroke-width="3" stroke-miterlimit="10" d="M329.9,216c-9.6,0-7.7,11.3,0,11.3"/>
+		<path fill="#C1272D" d="M329.1,229.6c1.6,2.4,12.3,2,13.1,0l-6.8-5.9L329.1,229.6z"/>
+	</g>
+</g>
+</svg>
