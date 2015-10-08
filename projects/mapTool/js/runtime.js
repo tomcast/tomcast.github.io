@@ -4,5 +4,6 @@ $( document ).ready(function() {
 	modalHandle.setAttribute('data-reveal-id','AddDataModal');
 
 	// remove documentation for secret mode
-	document.getElementsByClassName('leaflet-control-attribution')[0].remove();
+	x = document.getElementsByClassName('leaflet-control-attribution')[0]
+	x.remove();
 });
