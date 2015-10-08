@@ -2,28 +2,41 @@
 <html>
 <head>
 <meta charset=utf-8 />
-<title>Drawing Tools</title>
 <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<title>Drawing Tools</title>
 
+<!-- Foundation -->
+<link rel="stylesheet" href="css/foundation.css" />
+<script src="js/vendor/modernizr.js"></script>
+
+<!-- Leaflet -->
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
 <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
 <script type="text/javascript" src="js/vendor/leaflet.ajax.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
+<!-- Custom -->
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
 
+<!-- Leaflet/Mapbox JS and CSS -->
 <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.css' rel='stylesheet' />
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.js'></script>
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/Leaflet.fullscreen.min.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.2/leaflet.fullscreen.css' rel='stylesheet' />
 
-
 <div id='map'></div>
 
-<script type="text/javascript" src="js/map.js"></script>
+<!-- Foundation Scripts -->
+<script src="js/vendor/jquery.js"></script>
+<script src="js/foundation.min.js"></script>
+<script>
+   $(document).foundation();
+</script>
+
+<script src="js/map.js"></script>
+<script src="js/dataAdd.js"></script>
 
 </body>
 </html>
