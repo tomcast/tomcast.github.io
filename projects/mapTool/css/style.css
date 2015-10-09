@@ -15,9 +15,27 @@ body {
 }
 
 .addData {
-  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+	box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
 
 .addData:hover {
-  box-shadow: 0 0 15px rgba(0,0,0,2);
+	box-shadow: 0 0 15px rgba(0,0,0,2);
+}
+
+.dataLayer {
+	height: 100px;
+	box-shadow: 0 0 15px rgba(0,0,0,0.5);
+	border-style: solid;
+	border-width: 5px;
+	border-color: red;
+	background-color: #C0C0C0;
+
+}
+
+.dataLayer:hover {
+	box-shadow: 0 0 15px rgba(0,0,0,2);
+}
+
+.active {
+	border-color: green;
 }
