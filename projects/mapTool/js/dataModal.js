@@ -1,3 +1,5 @@
+//Creates the Add Data button for the data control modal
+
 var addDataButton = L.control({position: 'bottomright'});
 
 addDataButton.onAdd = function (map) {
