@@ -11,6 +11,7 @@ function loadPointDataToModal (layerName, layerDisplayName, layerType) {
 	modal.innerHTML += modalString;
 }
 
+//Load the data via Leaflet AJAX plugin
 var wayneMiTacoBell = new L.GeoJSON.AJAX("data/wayne_tacobell.json", {
 	onEachFeature: function(feature, layer) {
 		layer.bindPopup(feature.properties.streetAddr + "</br>" + feature.properties.city + ", " +
@@ -18,7 +19,11 @@ var wayneMiTacoBell = new L.GeoJSON.AJAX("data/wayne_tacobell.json", {
 	}
 });
 
+//Load loaded data to the data controlling modal via function
 loadPointDataToModal('wayneMiTacoBell', "Wayne Taco Bell", "point");
+
+
+//Add connection between layer and data modal via jquery
 $('#wayneMiTacoBellToggle').click( function(){
 	if($(this).hasClass('active')){
 		$(this).removeClass('active');
