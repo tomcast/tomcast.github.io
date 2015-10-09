@@ -27,7 +27,7 @@ var cairoDistrictLayer = new L.GeoJSON.AJAX("data/cairo_districts.json", {
 				opacity: 1};
 	},
 	onEachFeature: function(feature, layer) {
-		layer.bindPopup("<h2>" + feature.properties.Name + "</h2></br>" + "Population: " + feature.properties.Pop2006);
+		layer.bindPopup("<h4>" + feature.properties.Name + "</h4></br>" + "Population: " + feature.properties.Pop2006);
 	}
 });
 
@@ -39,7 +39,7 @@ var cairoPopLayer = new L.GeoJSON.AJAX("data/cairo_districts.json", {
 				opacity: 1};
 	},
 	onEachFeature: function(feature, layer) {
-		layer.bindPopup("<h2>" + feature.properties.Name + "</h2></br>" + "Population: " + feature.properties.Pop2006);
+		layer.bindPopup("<h4>" + feature.properties.Name + "</h4></br>" + "Population: " + feature.properties.Pop2006);
 	}
 });
 
@@ -50,7 +50,7 @@ var cairoWealthLayer = new L.GeoJSON.AJAX("data/cairo_districts_wealth.json", {
 				opacity: 1};
 	},
 	onEachFeature: function(feature, layer) {
-		layer.bindPopup("<h2>" + feature.properties.Name + "</h2></br>" + "Wealth Level: " + feature.properties.Wealth_Cla);
+		layer.bindPopup("<h4>" + feature.properties.Name + "</h4></br>" + "Wealth Level: " + feature.properties.Wealth_Cla);
 	}
 });
 
