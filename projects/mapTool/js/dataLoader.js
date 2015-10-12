@@ -11,6 +11,22 @@ function loadPointDataToModal (layerName, layerDisplayName, layerType) {
 	modal.innerHTML += modalString;
 }
 
+
+function fix_handler (layerName, layer) {
+	//Takes in a layer and layer name and affixes the handling for it
+	$('#' + layerName + 'Toggle').click( function() {
+		if($(this).hasClass('active')){
+			$(this).removeClass('active');
+			map.removeLayer(layer);
+		} else {
+			$(this).addClass('active');
+			layer.addTo(map);
+		}
+	});
+
+}
+
+
 //Load the data via Leaflet AJAX plugin
 var wayneMiTacoBell = new L.GeoJSON.AJAX("data/wayne_tacobell.json", {
 	onEachFeature: function(feature, layer) {
@@ -54,11 +70,20 @@ var cairoWealthLayer = new L.GeoJSON.AJAX("data/cairo_districts_wealth.json", {
 	}
 });
 
+var wayneMi_CensusTracts = new L.GeoJSON.AJAX("data/wayneCensusTracts.json", {
+	style: function(feature) {
+		return {color: getRandomColor(),
+			weight: 2,
+			opacity: 1};
+	}
+});
+
 /////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////
 
 //Load loaded data to the data controlling modal via function
 loadPointDataToModal('wayneMiTacoBell', "Wayne Taco Bell", "point");
+loadPointDataToModal('wayneMiCensusTracts', "Wayne Census Tracts", "polygon");
 loadPointDataToModal('cairoDistricts', "Cairo Districts", "polygon");
 loadPointDataToModal('cairoDistrictWealth', "Cairo Wealth", "polygon");
 loadPointDataToModal('cairoDistrictPop', "Cairo Population", "polygon");
@@ -66,45 +91,11 @@ loadPointDataToModal('cairoDistrictPop', "Cairo Population", "polygon");
 /////////////////////////////////////////////////////////////////////
 
 //Add connection between layer and data modal via jquery
-$('#wayneMiTacoBellToggle').click( function(){
-	if($(this).hasClass('active')){
-		$(this).removeClass('active');
-		map.removeLayer(wayneMiTacoBell);
-	} else {
-		$(this).addClass('active');
-		wayneMiTacoBell.addTo(map);
-	}
-});
+fix_handler('wayneMiTacoBell',wayneMiTacoBell);
+fix_handler('wayneMiCensusTracts', wayneMi_CensusTracts);
+fix_handler('cairoDistricts', cairoDistrictLayer);
+fix_handler('cairoDistrictWealth', cairoWealthLayer);
+fix_handler('cairoDistrictPop', cairoPopLayer);
 
-
-$('#cairoDistrictsToggle').click( function(){
-	if($(this).hasClass('active')){
-		$(this).removeClass('active');
-		map.removeLayer(cairoDistrictLayer);
-	} else {
-		$(this).addClass('active');
-		cairoDistrictLayer.addTo(map);
-	}
-});
-
-
-$('#cairoDistrictWealthToggle').click( function(){
-	if($(this).hasClass('active')){
-		$(this).removeClass('active');
-		map.removeLayer(cairoWealthLayer);
-	} else {
-		$(this).addClass('active');
-		cairoWealthLayer.addTo(map);
-	}
-});
-
-
-$('#cairoDistrictPopToggle').click( function(){
-	if($(this).hasClass('active')){
-		$(this).removeClass('active');
-		map.removeLayer(cairoPopLayer);
-	} else {
-		$(this).addClass('active');
-		cairoPopLayer.addTo(map);
-	}
-});
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
