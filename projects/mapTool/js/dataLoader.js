@@ -6,7 +6,8 @@ function loadPointDataToModal (layerName, layerDisplayName, layerType) {
 	// and adds it to the data selection modal to be used.
 
 	modal = document.getElementsByClassName('dataList')[0];
-	modalString = '<li><div id="' + layerName + 'Toggle" class="dataLayer">' + layerDisplayName + '</div></li>';
+	layerToggle = layerName + 'Toggle'
+	modalString = '<li><div id="' + layerToggle + '" class="dataLayer"><div class="dataThumb"></div><div class="dataInfo">' + layerDisplayName + '</div></div></li>';
 
 	modal.innerHTML += modalString;
 }
