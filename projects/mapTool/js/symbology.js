@@ -26,3 +26,13 @@ function getRandomColor() {
     }
     return color;
 }
+
+var ChipotleIcon = L.icon({
+    iconUrl: './img/logo/Chipotle.png',
+    iconSize:     [50, 50], // size of the icon
+});
+
+var TacoBellIcon = L.icon({
+    iconUrl: './img/logo/Taco_Bell.png',
+    iconSize:     [50, 50], // size of the icon
+});

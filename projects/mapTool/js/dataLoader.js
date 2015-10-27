@@ -33,6 +33,18 @@ var wayneMiTacoBell = new L.GeoJSON.AJAX("data/wayne_tacobell.json", {
 	onEachFeature: function(feature, layer) {
 		layer.bindPopup(feature.properties.streetAddr + "</br>" + feature.properties.city + ", " +
 		feature.properties.state + " " + feature.properties.postalCode);
+	},
+	pointToLayer: function(feature, latlng) {
+		return L.marker(latlng, {icon: TacoBellIcon})
+	}
+});
+
+var chipotleLoc = new L.GeoJSON.AJAX("data/chipotle_locations.json", {
+	onEachFeature: function(feature, layer) {
+		layer.bindPopup(feature.properties.address1 + "</br>" + feature.properties.city + ", " + feature.properties.state)
+	},
+	pointToLayer: function(feature, latlng) {
+		return L.marker(latlng, {icon: ChipotleIcon})
 	}
 });
 
@@ -84,6 +96,7 @@ var wayneMi_CensusTracts = new L.GeoJSON.AJAX("data/wayneCensusTracts.json", {
 
 //Load loaded data to the data controlling modal via function
 loadPointDataToModal('wayneMiTacoBell', "Wayne Taco Bell", "point");
+loadPointDataToModal('chipotleLoc', "Chipotle Locations", "point");
 loadPointDataToModal('wayneMiCensusTracts', "Wayne Census Tracts", "polygon");
 loadPointDataToModal('cairoDistricts', "Cairo Districts", "polygon");
 loadPointDataToModal('cairoDistrictWealth', "Cairo Wealth", "polygon");
@@ -93,6 +106,7 @@ loadPointDataToModal('cairoDistrictPop', "Cairo Population", "polygon");
 
 //Add connection between layer and data modal via jquery
 fix_handler('wayneMiTacoBell',wayneMiTacoBell);
+fix_handler('chipotleLoc',chipotleLoc);
 fix_handler('wayneMiCensusTracts', wayneMi_CensusTracts);
 fix_handler('cairoDistricts', cairoDistrictLayer);
 fix_handler('cairoDistrictWealth', cairoWealthLayer);
