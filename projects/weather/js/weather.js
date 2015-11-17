@@ -22,7 +22,7 @@ function httpGetAsync(theUrl, callback)
 function processWeather(weatherData) {
 	var weatherJSON = JSON.parse(weatherData);
 	latlon = [weatherJSON.coord.lat, weatherJSON.coord.lon];
-	makeMap(latlon, weatherJSON.name);
+	makeMap(latlon, weatherJSON.name, weatherJSON.weather[0].icon);
 	decorate(weatherJSON);
 
 	$(".temp").append(Math.floor(weatherJSON.main.temp * 9/5 - 459.67) + '°F (' + Math.floor(weatherJSON.main.temp - 273.15) + '°C)</br>');
@@ -35,10 +35,18 @@ function processWeather(weatherData) {
 	
 }
 
-function makeMap(latlon, name) {
+function makeMap(latlon, name, icon) {
 	//does nothing but put a smile in console for now...
 	var map = L.map('map', {zoomControl: false}).setView(latlon, 10);
-	var locationMarker = L.marker(latlon).addTo(map).bindPopup(toTitleCase(name));
+	// var iconUrl = 'http://openweathermap.org/img/w/' + icon + '.png';
+	// var weatherIcon = L.icon({
+	// 	iconurl:
+	// })
+
+	var locationMarker = L.marker(latlon, {
+		icon: L.icon({
+			iconUrl: 'http://openweathermap.org/img/w/' + icon + '.png',
+			iconAnchor: [20,10]})}).addTo(map).bindPopup(toTitleCase(name));
 
 	var osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
   		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'});
@@ -48,6 +56,7 @@ function makeMap(latlon, name) {
 
 function decorate(weatherJSON){
 	$('title').text(toTitleCase(weatherJSON.name) + " Weather");
+	$('#favicon').attr('href','http://openweathermap.org/img/w/' + weatherJSON.weather[0].icon + '.png')
 }
 
 var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?id=5015599&appid=285a2fd06760934042c5d08af1e8e008';
