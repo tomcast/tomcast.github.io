@@ -1,0 +1,23 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+
+body {
+	font-family: 'Lato', sans-serif;
+	color: white;
+}
+
+#current {
+	opacity: 0.75;
+	background-color: #404040;
+	text-align: center;
+	margin:auto;
+	width: 600px;
+}
+
+#map {
+	color: black;
+	vertical-align: center; 
+	margin: auto;
+	margin-top: 25vh;
+  	height: 400px;
+  	width: 600px; 
+}
