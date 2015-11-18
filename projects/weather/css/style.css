@@ -2,7 +2,12 @@
 
 body {
 	font-family: 'Lato', sans-serif;
-	color: white;
+	color: #505050;
+}
+.header {
+	width: 100%;
+	text-align: center;
+	vertical-align: center; 
 }
 
 .weatherInfo {
@@ -16,7 +21,6 @@ body {
 	color: black;
 	vertical-align: center; 
 	margin: auto;
-	margin-top: 25vh;
   	height: 400px;
   	width: 600px; 
 }

@@ -23,6 +23,7 @@ function processWeather(weatherData) {
 	var weatherJSON = JSON.parse(weatherData);
 
 	$('title').text(toTitleCase(weatherJSON.name) + " Weather");
+	$('#mapHeader').text(toTitleCase(weatherJSON.name) + " Weather");
 	$('#favicon').attr('href','http://openweathermap.org/img/w/' + weatherJSON.weather[0].icon + '.png')
 
 	latlon = [weatherJSON.coord.lat, weatherJSON.coord.lon];
@@ -40,7 +41,7 @@ function processWeather(weatherData) {
 
 function makeMap(latlon, name, icon) {
 
-	var map = L.map('map', {zoomControl: false}).setView(latlon, 10);
+	var map = L.map('map', {zoomControl: false}).setView(latlon, 11);
 
 	var locationMarker = L.marker(latlon, {
 		icon: L.icon({
@@ -78,7 +79,5 @@ function processLatLon(position) {
 }
 
 
-// var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?id=5015599&appid=285a2fd06760934042c5d08af1e8e008';
-// httpGetAsync(weatherUrl, processWeather);
 
 getLatLon();
