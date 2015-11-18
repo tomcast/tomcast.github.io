@@ -19,6 +19,26 @@ function httpGetAsync(theUrl, callback)
     xmlHttp.send(null);
 }
 
+
+function windDir (bearing) {
+	if(bearing > 315 && bearing <= 45) {
+		return "(N)"
+	}
+	else if (bearing > 45 && bearing <= 135) {
+		return "(E)"
+	}
+	else if (bearing > 135 && bearing <= 225) {
+		return "(S)"
+	}
+	else if (bearing > 225 && bearing <= 315) {
+		return "(W)"
+	}
+	else{
+		return "(?)"
+	}
+}
+
+
 function processWeather(weatherData) {
 	var weatherJSON = JSON.parse(weatherData);
 
@@ -34,7 +54,7 @@ function processWeather(weatherData) {
 	$(".cloud").append('Cloud cover: '+ weatherJSON.clouds.all + '%</br>');
 	$(".humid").append('Humidity: ' + weatherJSON.main.humidity + '%</br>');
 	$(".press").append('Pressure: ' + weatherJSON.main.pressure + ' hPa</br>');
-	$(".wDeg").append('Wind Bearing: ' + weatherJSON.wind.deg + '</br>');
+	$(".wDeg").append('Wind Bearing: ' + weatherJSON.wind.deg + ' ' + windDir(weatherJSON.wind.deg) +'</br>');
 	$(".wSpd").append('Wind Speed: ' + (weatherJSON.wind.speed * 0.621371).toFixed(2) + ' mph</br>');
 	
 }
