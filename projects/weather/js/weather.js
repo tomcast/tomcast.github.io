@@ -49,7 +49,7 @@ function makeMap(latlon, name, icon) {
 			iconAnchor: [20,10]})}).addTo(map).bindPopup(toTitleCase(name));
 
 	var osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-  		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'});
+  		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors | Weather data from <a href="http://openweathermap.org/about">OpenWeatherMap</a>'});
 
 	osmLayer.addTo(map);
 
