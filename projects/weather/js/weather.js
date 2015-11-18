@@ -1,5 +1,4 @@
-function toTitleCase(string)
-{
+function toTitleCase (string) {
     // \u00C0-\u00ff for a happy Latin-1
     return string.toLowerCase().replace(/_/g, ' ').replace(/\b([a-z\u00C0-\u00ff])/g, function (_, initial) {
         return initial.toUpperCase();
@@ -8,8 +7,17 @@ function toTitleCase(string)
     });
 }
 
-function httpGetAsync(theUrl, callback)
-{
+function unixToDate (unix_timestamp) {
+	var date = new Date(unix_timestamp*1000);
+	var hours = date.getHours();
+	var minutes = "0" + date.getMinutes();
+	var seconds = "0" + date.getSeconds();
+
+	// Will display time in 10:30:23 format
+	return hours + ':' + minutes.substr(-2) + ':' + seconds.substr(-2);
+}
+
+function httpGetAsync (theUrl, callback) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() { 
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
@@ -18,7 +26,6 @@ function httpGetAsync(theUrl, callback)
     xmlHttp.open("GET", theUrl, true); // true for asynchronous 
     xmlHttp.send(null);
 }
-
 
 function windDir (bearing) {
 	if(bearing > 315 && bearing <= 45) {
@@ -56,6 +63,7 @@ function processWeather(weatherData) {
 	$(".press").append('Pressure: ' + weatherJSON.main.pressure + ' hPa</br>');
 	$(".wDeg").append('Wind Bearing: ' + weatherJSON.wind.deg + ' ' + windDir(weatherJSON.wind.deg) +'</br>');
 	$(".wSpd").append('Wind Speed: ' + (weatherJSON.wind.speed * 0.621371).toFixed(2) + ' mph</br>');
+	$(".time").append('Last Update: ' + unixToDate(weatherJSON.dt));
 	
 }
 
@@ -81,7 +89,7 @@ function makeMap(latlon, name, icon) {
 	};
 
 	info.update = function () {
-		this._div.innerHTML = '<div class="temp"></div><div class="desc"></div><div class="cloud"></div><div class="humid"></div><div class="press"></div><div class="wDeg"></div><div class="wSpd"></div>'
+		this._div.innerHTML = '<div class="temp"></div><div class="desc"></div><div class="cloud"></div><div class="humid"></div><div class="press"></div><div class="wDeg"></div><div class="wSpd"></div><div class="time"></div>';
 	}
 
 	info.addTo(map);
