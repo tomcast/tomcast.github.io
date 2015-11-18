@@ -74,9 +74,10 @@ function makeMap(latlon, name, icon) {
 	var locationMarker = L.marker(latlon, {
 		icon: L.icon({
 			iconUrl: 'http://openweathermap.org/img/w/' + icon + '.png',
-			iconAnchor: [20,10]})}).addTo(map).bindPopup(toTitleCase(name));
+			iconAnchor: [20,10],
+			iconSize: [60,60]})}).addTo(map).bindPopup(toTitleCase(name));
 
-	var osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+	var osmLayer = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
   		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors | Weather data from <a href="http://openweathermap.org/about">OpenWeatherMap</a>'});
 
 	osmLayer.addTo(map);
