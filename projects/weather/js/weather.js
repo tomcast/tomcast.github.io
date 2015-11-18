@@ -21,27 +21,26 @@ function httpGetAsync(theUrl, callback)
 
 function processWeather(weatherData) {
 	var weatherJSON = JSON.parse(weatherData);
+
+	$('title').text(toTitleCase(weatherJSON.name) + " Weather");
+	$('#favicon').attr('href','http://openweathermap.org/img/w/' + weatherJSON.weather[0].icon + '.png')
+
 	latlon = [weatherJSON.coord.lat, weatherJSON.coord.lon];
 	makeMap(latlon, weatherJSON.name, weatherJSON.weather[0].icon);
-	decorate(weatherJSON);
 
 	$(".temp").append(Math.floor(weatherJSON.main.temp * 9/5 - 459.67) + '°F (' + Math.floor(weatherJSON.main.temp - 273.15) + '°C)</br>');
-	$(".desc").append(weatherJSON.weather[0].description + '</br>');
-	$(".cloud").append(weatherJSON.clouds.all + '%</br>');
-	$(".humid").append(weatherJSON.main.humidity + '%</br>');
-	$(".press").append(weatherJSON.main.pressure + ' hPa</br>');
-	$(".wDeg").append(weatherJSON.wind.deg + '</br>');
-	$(".wSpd").append((weatherJSON.wind.speed * 0.621371).toFixed(2) + ' mph</br>');
+	$(".desc").append(toTitleCase(weatherJSON.weather[0].description) + '</br>');
+	$(".cloud").append('Cloud cover: '+ weatherJSON.clouds.all + '%</br>');
+	$(".humid").append('Humidity: ' + weatherJSON.main.humidity + '%</br>');
+	$(".press").append('Pressure: ' + weatherJSON.main.pressure + ' hPa</br>');
+	$(".wDeg").append('Wind Bearing: ' + weatherJSON.wind.deg + '</br>');
+	$(".wSpd").append('Wind Speed: ' + (weatherJSON.wind.speed * 0.621371).toFixed(2) + ' mph</br>');
 	
 }
 
 function makeMap(latlon, name, icon) {
-	//does nothing but put a smile in console for now...
+
 	var map = L.map('map', {zoomControl: false}).setView(latlon, 10);
-	// var iconUrl = 'http://openweathermap.org/img/w/' + icon + '.png';
-	// var weatherIcon = L.icon({
-	// 	iconurl:
-	// })
 
 	var locationMarker = L.marker(latlon, {
 		icon: L.icon({
@@ -52,12 +51,21 @@ function makeMap(latlon, name, icon) {
   		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'});
 
 	osmLayer.addTo(map);
+
+	var info = L.control();
+	info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'weatherInfo');
+    this.update();
+    return this._div;
+	};
+
+	info.update = function () {
+		this._div.innerHTML = '<div class="temp"></div><div class="desc"></div><div class="cloud"></div><div class="humid"></div><div class="press"></div><div class="wDeg"></div><div class="wSpd"></div>'
+	}
+
+	info.addTo(map);
 }
 
-function decorate(weatherJSON){
-	$('title').text(toTitleCase(weatherJSON.name) + " Weather");
-	$('#favicon').attr('href','http://openweathermap.org/img/w/' + weatherJSON.weather[0].icon + '.png')
-}
 
 var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?id=5015599&appid=285a2fd06760934042c5d08af1e8e008';
 httpGetAsync(weatherUrl, processWeather);

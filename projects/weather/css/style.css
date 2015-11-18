@@ -5,12 +5,11 @@ body {
 	color: white;
 }
 
-#current {
-	opacity: 0.75;
-	background-color: #404040;
-	text-align: center;
-	margin:auto;
-	width: 600px;
+.weatherInfo {
+	opacity: 0.95;
+	background-color: white;
+	border-radius: 5px;
+	padding: 5px;
 }
 
 #map {
