@@ -66,6 +66,19 @@ function makeMap(latlon, name, icon) {
 	info.addTo(map);
 }
 
+function getLatLon() {
+	return navigator.geolocation.getCurrentPosition(processLatLon);
 
-var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?id=5015599&appid=285a2fd06760934042c5d08af1e8e008';
-httpGetAsync(weatherUrl, processWeather);
+}
+
+function processLatLon(position) {
+	var lat = position.coords.latitude.toFixed(2);
+	var lon = position.coords.longitude.toFixed(2);
+	httpGetAsync('http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid=285a2fd06760934042c5d08af1e8e008', processWeather)
+}
+
+
+// var weatherUrl = 'http://api.openweathermap.org/data/2.5/weather?id=5015599&appid=285a2fd06760934042c5d08af1e8e008';
+// httpGetAsync(weatherUrl, processWeather);
+
+getLatLon();
