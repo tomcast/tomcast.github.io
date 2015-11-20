@@ -89,7 +89,6 @@ function processForecast (forecastData) {
         cellWind.innerHTML = (forecastJSON.list[i].wind.speed * 0.621371).toFixed(2);
         cellWindDir.innerHTML = windDir(forecastJSON.list[i].wind.deg);
     };
-    console.log(forecastJSON);
 }
 
 getLatLon();
