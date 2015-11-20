@@ -8,6 +8,25 @@ function toTitleCase (string) {
 }
 
 
+function windDir (bearing) {
+    if(bearing > 315 && bearing <= 45) {
+        return "N"
+    }
+    else if (bearing > 45 && bearing <= 135) {
+        return "E"
+    }
+    else if (bearing > 135 && bearing <= 225) {
+        return "S"
+    }
+    else if (bearing > 225 && bearing <= 315) {
+        return "W"
+    }
+    else{
+        return "?"
+    }
+}
+
+
 function unixToDate (unix_timestamp) {
     var date = new Date(unix_timestamp*1000);
     var hours = date.getHours();
@@ -52,13 +71,23 @@ function processForecast (forecastData) {
         var row = table.insertRow(0);
         var cellDate = row.insertCell(0);
         var cellTemp = row.insertCell(1);
-        var cellHum = row.insertCell(2);
-        var cellPres = row.insertCell(3);
+        var cellCloud = row.insertCell(2);
+        var cellHum = row.insertCell(3);
+        var cellPres = row.insertCell(4);
+        var cellCond = row.insertCell(5);
+        var cellIcon = row.insertCell(6);
+        var cellWind = row.insertCell(7);
+        var cellWindDir = row.insertCell(8);
         cellDate.innerHTML = forecastJSON.list[i].dt_txt;
         theTemp = forecastJSON.list[i].main.temp;
         cellTemp.innerHTML = Math.floor(theTemp * 9/5 - 459.67) + ' (' + Math.floor(theTemp - 273.15) + ')';
         cellHum.innerHTML = forecastJSON.list[i].main.humidity;
         cellPres.innerHTML = forecastJSON.list[i].main.pressure;
+        cellCloud.innerHTML = forecastJSON.list[i].clouds.all;
+        cellCond.innerHTML = toTitleCase(forecastJSON.list[i].weather[0].description);
+        cellIcon.innerHTML = "<img src='http://openweathermap.org/img/w/" + forecastJSON.list[i].weather[0].icon + ".png'>";
+        cellWind.innerHTML = (forecastJSON.list[i].wind.speed * 0.621371).toFixed(2);
+        cellWindDir.innerHTML = windDir(forecastJSON.list[i].wind.deg);
     };
     console.log(forecastJSON);
 }
