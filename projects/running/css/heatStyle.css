@@ -3,10 +3,13 @@
 
 body {
   width: 100%;
+  margin: 0px;
 }
 
 #chartHead {
-  padding-top: 20px;
+  width: 50%;
+  margin: auto;
+  padding-top: 25px;
   font-family: Oxygen;
   font-size: 24pt;
   text-align: center;
@@ -15,13 +18,11 @@ body {
 #chart {
   width: 50%;
   margin: auto;
-  vertical-align: center;
 }
 
 #expl {
   width: 50%;
   margin: auto;
-  vertical-align: center;
   font-family: Open Sans;
   font-size: 9pt;
 }
@@ -32,8 +33,8 @@ rect.bordered {
 }
 
 text.mono {
-  font-size: 9pt;
-  font-family: Consolas, courier;
+  font-size: 8pt;
+  font-family: Oxygen;
   fill: #aaa;
 }
 

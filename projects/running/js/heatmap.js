@@ -2,7 +2,7 @@ var margin = { top: 50, right: 0, bottom: 100, left: 30 },
     width = 960 - margin.left - margin.right,
     height = 550 - margin.top - margin.bottom,
     gridSize = Math.floor(width / 31),
-    legendElementWidth = gridSize*2,
+    legendElementWidth = gridSize*3,
     buckets = 9,
     colors = ["#4575b4","#74add1","#abd9e9","#e0f3f8","#ffffbf","#fee090","#fdae61","#f46d43","#d73027"],
     days = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -89,7 +89,7 @@ var heatmapChart = function(tsvFile) {
 
     legend.append("text")
       .attr("class", "mono")
-      .text(function(d) { return "≥ " + Math.round(d); })
+      .text(function(d) { return "≥ " + Math.round(d) +" mi"; })
       .attr("x", function(d, i) { return legendElementWidth * i; })
       .attr("y", height + gridSize);
 
