@@ -5,9 +5,13 @@ var margin = { top: 50, right: 0, bottom: 100, left: 30 },
     legendElementWidth = gridSize*3,
     buckets = 9,
     colors = ["#4575b4","#74add1","#abd9e9","#e0f3f8","#ffffbf","#fee090","#fdae61","#f46d43","#d73027"],
-    days = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+    months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     times = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
     datasets = ["./data/runningData.tsv"];
+
+function mNumToText (month) {
+  return months[month-1]
+}
 
 var svg = d3.select("#chart").append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -16,7 +20,7 @@ var svg = d3.select("#chart").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var dayLabels = svg.selectAll(".dayLabel")
-    .data(days)
+    .data(months)
     .enter().append("text")
       .text(function (d) { return d; })
       .attr("x", 0)
@@ -64,12 +68,14 @@ var heatmapChart = function(tsvFile) {
         .attr("class", "hour bordered")
         .attr("width", gridSize)
         .attr("height", gridSize)
-        .style("fill", colors[0]);
+        .style("fill", colors[0])
+        .html( function(d) {return "<title>Date: " + mNumToText(d.month) + " " + d.date + "<br>Distance: " + d.distance.toFixed(2) +"</title>"; });
+
 
     cards.transition().duration(1000)
         .style("fill", function(d) { return colorScale(d.distance); });
 
-    cards.select("title").text(function(d) { return d.value; });
+    //cards.select("title").text(function(d) { return d.distance; });
     
     cards.exit().remove();
 
@@ -99,3 +105,4 @@ var heatmapChart = function(tsvFile) {
 };
 
 heatmapChart(datasets[0]);
+
