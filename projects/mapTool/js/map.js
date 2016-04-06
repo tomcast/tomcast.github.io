@@ -15,26 +15,6 @@ var osmBWLayer = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}
   //attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
 
-var Here_SatHybrid = L.tileLayer('http://{s}.{base}.maps.cit.api.here.com/maptile/2.1/maptile/{mapID}/hybrid.day/{z}/{x}/{y}/256/png8?app_id={app_id}&app_code={app_code}', {
-  //attribution: 'Map &copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
-  subdomains: '1234',
-  mapID: 'newest',
-  app_id: 'Y8m9dK2brESDPGJPdrvs',
-  app_code: 'dq2MYIvjAotR8tHvY8Q_Dg',
-  base: 'aerial',
-  maxZoom: 20
-});
-
-var Here_DayTransit = L.tileLayer('http://{s}.{base}.maps.cit.api.here.com/maptile/2.1/maptile/{mapID}/normal.day.transit/{z}/{x}/{y}/256/png8?app_id={app_id}&app_code={app_code}', {
-  //attribution: 'Map &copy; 1987-2014 <a href="http://developer.here.com">HERE</a>',
-  subdomains: '1234',
-  mapID: 'newest',
-  app_id: 'Y8m9dK2brESDPGJPdrvs',
-  app_code: 'dq2MYIvjAotR8tHvY8Q_Dg',
-  base: 'base',
-  maxZoom: 20
-});
-
 var osmHOTLayer = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
   maxZoom: 19,
   //attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
@@ -57,8 +37,6 @@ osmLayer.addTo(map);
 
 var baseMaps = {
   "Openstreet Map": osmLayer,
-  "Day Transit": Here_DayTransit,
-  "Satellite": Here_SatHybrid,
   "Openstreet Map Black and White": osmBWLayer,
   "Openstreet HOT": osmHOTLayer,
   "Stamen TonerLite": Stamen_TonerLite,
