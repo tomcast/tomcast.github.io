@@ -11,9 +11,18 @@ var osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 });
 
 L.mapbox.accessToken = 'pk.eyJ1IjoiY29nc3dpY2siLCJhIjoiTVZERERHRSJ9.z4S7XK2lAJmgH-2URPANcg';
-var mapboxTiles = L.tileLayer('https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+var mapboxStreets = L.tileLayer('https://api.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
     attribution: '© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
+
+var mapboxSatellite = L.tileLayer('https://api.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+    attribution: '© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+});
+
+var mapboxWheat = L.tileLayer('https://api.mapbox.com/v4/mapbox.wheatpaste/{z}/{x}/{y}.png?access_token=' + L.mapbox.accessToken, {
+    attribution: '© <a href="https://www.mapbox.com/map-feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+});
+
 
 var osmBWLayer = L.tileLayer('http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
   maxZoom: 18,
@@ -43,7 +52,9 @@ osmLayer.addTo(map);
 var baseMaps = {
   "Openstreet Map": osmLayer,
   "Openstreet Map Black and White": osmBWLayer,
-  "Satellite Map": mapboxTiles,
+  "Satellite Map": mapboxSatellite,
+  "Whiskey Tango Foxtrot": mapboxWheat,
+  "Streetsv2": mapboxStreets,
   "Openstreet HOT": osmHOTLayer,
   "Stamen TonerLite": Stamen_TonerLite,
   "Topographic": Esri_WorldTopoMap
