@@ -43,6 +43,7 @@ osmLayer.addTo(map);
 var baseMaps = {
   "Openstreet Map": osmLayer,
   "Openstreet Map Black and White": osmBWLayer,
+  "Satellite Map": mapboxTiles,
   "Openstreet HOT": osmHOTLayer,
   "Stamen TonerLite": Stamen_TonerLite,
   "Topographic": Esri_WorldTopoMap
