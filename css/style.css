@@ -11,14 +11,10 @@ body {
 	background-color: #9999FF;
 }
 
-#logoDiv {
-	margin-top: 10px; 
-}
-
-#identity {
-	margin: 10px;
-}
-
 #wrapper{
 	text-align: center;
+}
+
+#logoDiv {
+	margin-top: 10%; 
 }
