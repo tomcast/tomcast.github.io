@@ -1,5 +1,13 @@
-node_modules
+# Logs
+logs
+*.log
+npm-debug.log*
 
-package-lock.json
+# Dependency directories
+node_modules/
 
-.log
+# Compiled and built versions of /src
+dist
+
+# Compiled output distributables
+production
