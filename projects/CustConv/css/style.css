@@ -7,4 +7,14 @@ body {
 
 }
 
-#map { height: 180px; }
+#content {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+
+
+#map { 
+	height: 400px; 
+	width: 600px;
+}
