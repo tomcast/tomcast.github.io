@@ -1,17 +1,6 @@
 // File to handle the background map and toggle background map layers on and off.
 // Does not work with other data outside of background map.
 
-
-//handling functions
-function getColor(d) {
-	return d > 5555 ? '#b30000' :
-		d > 3969  ? '#e34a33' :
-		d > 2647  ? '#fc8d59' :
-		d > 1174  ? '#fdcc8a' :
-				   '#fef0d9' ;
-}
-
-
 //Create base map in basicMap div
 var basicMap = L.map('basicMap').setView([42.46, -83.18], 9);;
 
@@ -43,3 +32,4 @@ var areas = new L.GeoJSON.AJAX("data/areas.geojson", {
 		layer.bindPopup("Tract: " + feature.properties.GEOID + "</br> Population: " + feature.properties.pop_TOTAL);
 	}
 }).addTo(basicMap);
+
