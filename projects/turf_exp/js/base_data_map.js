@@ -5,7 +5,7 @@
 var basicMap = L.map('basicMap').setView([42.46, -83.18], 9);;
 
 //Load basemap tile layer
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+var backgroundMap = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(basicMap);
@@ -18,7 +18,6 @@ var locations = new L.GeoJSON.AJAX("data/Locations.geojson", {
 		feature.properties.State + " " + feature.properties.ZIP);
 	}
 }).addTo(basicMap);
-
 
 //Load and display the base geographic areas
 var areas = new L.GeoJSON.AJAX("data/areas.geojson", {
