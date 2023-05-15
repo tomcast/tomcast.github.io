@@ -6,7 +6,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="img/logo_new.png">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+
+  <body onload="changePageTitle()">
     <div class='wrapper'>
 
         <div id='logoBox'>
@@ -18,13 +19,15 @@
         </div>
 
         <div id='fileTabBox'>
-            <div class="fileTabItem">Resume</div>
+            <div class="fileTabItem">resume.py</div>
         </div>
 
     </div>
 
 
-    <div id='iconStack'></div>
+    <div id='iconStack'>
+      <!--  future icons here -->
+    </div>
 
     <div id='fileStack'>
         <div class="fileItemGroup">Projects and Things</div>
@@ -42,6 +45,6 @@
         <n>2</n> Some more here
       </p>
     </div>
-
+    <script type="text/javascript" src="js/site_operations.js"></script>
   </body>
 </html>
