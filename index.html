@@ -1,20 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Tom Cast</title>
-	<link rel="icon" type="image/png" href="img/logo_new.png">
+  <head>
+    <meta charset="utf-8">
+    <title>Tom Cast</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo_new.png">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
 
-</head>
-<body>
-<div id="wrapper" style="text-align:center; margin-top: 150px;">
-	<div id="logoDiv">
-		<img src="img/logo_new.png" style="width:300px;height:300px;"></a>
-	</div>
-	<div id="contact">
-		<a href="mailto:castthom@gmail.com">castthom@gmail.com</a></br>
-		<a href="https://www.linkedin.com/in/thomas-cast-62372215/">linkedin</a></br>
-	</div>
-</div>
+  <body onload="changePageTitle()">
+    <div class='wrapper'>
 
-</body>
+        <div id='logoBox'>
+          <img src="img/logo_new.png" style="width:28px;height:28px;"></a>
+        </div>
+
+        <div id='explorerBox'>
+          EXPLORER
+        </div>
+
+        <div id='fileTabBox'>
+            <div class="fileTabItem">resume.py</div>
+        </div>
+
+    </div>
+
+
+    <div id='iconStack'>
+      <!--  future icons here -->
+    </div>
+
+    <div id='fileStack'>
+        <div class="fileItemGroup">Projects and Things</div>
+        <div class="fileItem"> 
+            > Project 1<br>
+            > Project 2<br>
+            > Project 3
+        </div>
+    </div>
+
+    <div id='resumeStack'> 
+      tomcast.github.io > <img src="img/python_Logo.svg" style="width:15px;height:15px;"></a>resume.py
+      <p><cm>
+        <n>1  &nbsp;&nbsp; </n> ############################################################################### <br>
+        <n>2  &nbsp;&nbsp; </n> # An overly complicated way to create a resume as a collection of objects <br>
+        <n>3  &nbsp;&nbsp; </n> # using standard python code. This should, in theory, actually run. <br>
+        <n>4  &nbsp;&nbsp; </n> # serves absolutely no purpose but it was fun to build <br>
+        <n>5  &nbsp;&nbsp; </n> # enjoy... <br>
+        <n>6  &nbsp;&nbsp; </n> ############################################################################### <br></cm>
+        <n>6  &nbsp;&nbsp; </n> <br>
+        <n>7  &nbsp;&nbsp; </n> <br>
+        <n>8  &nbsp;&nbsp; </n> <o>professionalAdult</o> <stx>=</stx> <brk>{</brk> <br>
+        <n>9  &nbsp;&nbsp; </n> &nbsp;&nbsp;<str>"name" <dvd> : </dvd> "Tom Cast"</str>, <br>
+        <n>10 &nbsp; </n> &nbsp;&nbsp;<str>"email" <dvd> : </dvd> "castthom@gmail.com"</str>, <br>
+        <n>11 &nbsp; </n> &nbsp;&nbsp;<str>"location" <dvd> : </dvd> "South Detroit"</str>, <br>
+        <n>12 &nbsp; </n> &nbsp;&nbsp;<str>"officialTitle" <dvd> : </dvd> "Principle Consultant, S&P Global Mobility"</str>, <br>
+        <n>13 &nbsp; </n> &nbsp;&nbsp;<str>"unofficialtitle" <dvd> : </dvd> "GIS Nerd/Consultant/Fixer/Builder" </str><br>   
+        <n>14 &nbsp; </n> <brk>}</brk> <br>        
+      </p>
+    </div>
+    <script type="text/javascript" src="js/site_operations.js"></script>
+  </body>
 </html>

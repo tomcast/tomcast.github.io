@@ -19,6 +19,30 @@ n {
 	color: rgb(96, 95, 109);
 }
 
+o {
+	color: rgb(255, 55, 55);
+}
+
+stx {
+	color:rgb(23, 201, 255)
+}
+
+brk {
+	color:rgb(255, 202, 29)
+}
+
+dvd {
+	color: rgb(199, 199, 199)
+}
+
+str {
+	color: rgb(46, 255, 27)
+}
+
+cm {
+	color:gray
+}
+
 .fileItem {
 	width: 100%;
 	height: 30px;
@@ -54,6 +78,7 @@ n {
 
 #explorerBox {
 	float: left;
+	font-family: 'Open Sans';
 	width: 250px;
 	height: 30px;
 	text-indent: 25px;
@@ -76,6 +101,7 @@ n {
 }
 
 #fileStack {
+	font-family: 'Open Sans';
 	width: 250px;
 	height: calc(100vh - 30px);
 	float: left;
