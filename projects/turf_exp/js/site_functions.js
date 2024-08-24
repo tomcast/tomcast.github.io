@@ -36,39 +36,13 @@ function getColor(d) {
 }
 
 
-function centroidDistance (polygons, points) {
+function getNearestStore (point, locations){
 	/*
-		Takes in polygons, finds the centroids, and calculates distance
-		from point locations.
-
-		var tractGeo = tracts.toGeoJSON();
-		var centroidPt = turf.centroid(tractGeo.features[0].geometry.geometries[1]) 
-		centroidDistance (tractGeo.features[0].geometry.geometries, existing)
+		Takes in a point and returns the nearest location
+		from a list of potential locations
 	*/
 
-	var centIterate = 0
-	var centroidArray = []
-
-	for (var i = 0; i < polygons.length; i++) {
-		var centroidPt = turf.centroid(polygons[i]);
-		var pointDist = 100000000;
-
-
-		for (var q = 0; q < points.length; q++) {
-			var calcDist = turf.distance(centroidPt, points[q], "miles");
-			if (calcDist < pointDist) {
-				pointDist = calcDist;
-			};
-			centIterate++;
-
-		};
-
-		centroidPt.properties["distance"] = pointDist;
-		centroidPt.properties["demand"] = 1;
-		centroidArray.push(centroidPt);
-	};
-
-	return centroidArray;
+	return "2"
 }
 
 
